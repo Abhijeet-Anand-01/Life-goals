@@ -1,6 +1,28 @@
 .home {
-    background-color: #014343;
-    width: 100vw;
-    height: 100vh;
+  background-color: #014343;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.home .add-goal {
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  font-weight: 500;
+}
+
+.home .add-goal a {
+    text-decoration: none;
     color: #ffffff;
+}
+
+.home .goals-heading {
+  font-size: 2em;
+  margin: 16px 0;
+}
+
+.home .goal-title {
+    opacity: 0.8;
 }
