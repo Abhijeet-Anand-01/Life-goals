@@ -29,17 +29,17 @@ export class AppService {
     return JSON.parse(_refGoals);
   }
 
-  // addGoal(goal: Goal) {
-  //   goal.id = this.allGoals.length + 1;
-  //   this.allGoals.push(goal);
-  //   this.saveInLocalStorage();
-  // }
-  // editGoal(goal: Goal) {
-  //   // based on id update all goals
-  //   this.saveInLocalStorage();
-  // }
+  addGoal(goal: Goal) {
+    goal.id = this.allGoals.length + 1;
+    this.allGoals.push(goal);
+    this.saveInLocalStorage();
+  }
+  editGoal(goal: Goal) {
+    // based on id update all goals
+    this.saveInLocalStorage();
+  }
 
-  // getAllGoalTypes(){
-  //   return [{ title: "Property", img: "./path" }];
-  // }
+  getAllGoalTypes() {
+    return [{ title: "Property", img: "./path" }];
+  }
 }
