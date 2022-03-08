@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
+import { Goal } from '../model/goal';
 
 @Component({
   selector: 'app-goals-card',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goals-card.component.css']
 })
 export class GoalsCardComponent implements OnInit {
+  @Input()
+  goal!: Goal;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,8 @@
+<div class="home">
+    <p class="add-goal"><a routerLink="/goals">Add goal</a></p>
+    <h1 class="goals-heading">Life goals</h1>
+    <p class="goal-title">Take control of your saving goals</p>
+    <ng-container *ngFor="let goal of goals;">
+        <app-goals-card [goal]="goal"></app-goals-card>
+    </ng-container>
+</div>

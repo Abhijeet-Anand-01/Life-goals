@@ -1,9 +1,8 @@
 .home {
   background-color: #014343;
-  width: 100vw;
-  height: 100vh;
   color: #ffffff;
   padding: 20px;
+  height: 100%;
 }
 
 .home .add-goal {

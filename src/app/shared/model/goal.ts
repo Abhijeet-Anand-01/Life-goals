@@ -5,5 +5,4 @@ export interface Goal {
     totalAmount: number;
     amountSaved: number;
     image: string;
-  }
-  
+}

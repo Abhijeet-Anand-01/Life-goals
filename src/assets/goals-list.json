@@ -1,0 +1,7 @@
+[
+    { "id": 1, "title": "Travel", "goalTitle": "Mountain Trip", "totalAmount": 10000, "amountSaved": 340, "image": "assets/svg-icons/house.svg"},
+    { "id": 2, "title": "property", "goalTitle": "New House", "totalAmount": 100000, "amountSaved": 56550, "image": "assets/svg-icons/house.svg"},
+    { "id": 3, "title": "Wedding", "goalTitle": "Wedding Day", "totalAmount": 10000, "amountSaved": 550, "image": "assets/svg-icons/house.svg"},
+    { "id": 4, "title": "Travel", "goalTitle": "Hiking Trip", "totalAmount": 18000, "amountSaved": 910, "image": "assets/svg-icons/house.svg"},
+    { "id": 5, "title": "Transport", "goalTitle": "New Car", "totalAmount": 12000, "amountSaved": 760, "image": "assets/svg-icons/house.svg"}
+]
