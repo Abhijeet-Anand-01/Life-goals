@@ -1,0 +1,127 @@
+.container {
+  background-color: #014343;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.container .top-section .back-arrow {
+  margin: 20px;
+}
+
+.container .top-section {
+  height: calc(100vh - 65%);
+}
+
+.container .search-goal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px 40px;
+}
+
+h1 {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0 40px;
+  margin-bottom: 30px;
+}
+
+.container .search-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1em;
+}
+
+.container .search-input::-webkit-input-placeholder {
+  padding-left: 20px;
+}
+
+.container .goals-container {
+  background-color: #ffffff;
+  color: black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 30px;
+  height: calc(100vh - 35%);
+}
+
+.container .goals-container h2 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.container .goals-container .common-goals .common-goal-container {
+  display: flex;
+}
+
+.container .goals-container .common-goals .common-goal-container .common-goal {
+    position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  margin: 0 16px 35px 0;
+}
+
+.container
+  .goals-container
+  .common-goals
+  .common-goal-container
+  .common-goal
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.container .goals-container .common-goals .common-goal-container .common-goal p {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.container .goals-container .other-goals .other-goal-container .other-goal {
+  display: flex;
+  align-items: center;
+}
+
+.container .goals-container .other-goals .other-goal-container .other-goal img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.container
+  .goals-container
+  .other-goals
+  .other-goal-container
+  .other-goal
+  .other-goal-details
+  h3 {
+  font-size: 1em;
+  color: #0064d3;
+}
+
+.container
+  .goals-container
+  .other-goals
+  .other-goal-container
+  .other-goal
+  .other-goal-details
+  p {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.container .goals-container .other-goals .other-goal-container hr {
+  margin: 10px 0;
+  opacity: 0.2;
+}
