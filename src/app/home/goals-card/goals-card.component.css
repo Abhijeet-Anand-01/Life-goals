@@ -1,0 +1,58 @@
+.card-body {
+  background-color: #008393;
+  color: #ffffff;
+  margin: 20px;
+  border-radius: 20px;
+  height: 250px;
+}
+
+.card-body .card-img {
+  height: 40%;
+  border-radius: inherit;
+}
+
+.card-body .card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card-body .card-content {
+  height: 60%;
+  padding: 20px;
+}
+
+.card-body .card-content hr {
+  margin: 10px 0 15px 0;
+  opacity: 0.2;
+}
+
+/* .card-body .card-content .content-heading {
+    margin-bottom: 10px;
+} */
+
+.card-body .card-content .amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body .card-content .amount .amount-saved .amount-text {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.card-body .card-content .amount .amount-saved .amount-charge {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.card-body .card-content .amount .amount-loader {
+  border: 10px solid #f3f3f391;
+  border-top: 10px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
