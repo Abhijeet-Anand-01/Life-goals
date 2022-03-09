@@ -3,13 +3,13 @@
   color: #ffffff;
   margin: 20px auto;
   border-radius: 20px;
-  height: 250px;
+  height: 300px;
   width: 350px;
 }
 
 .card-body .card-img {
   position: relative;
-  height: 40%;
+  height: 50%;
   border-radius: inherit;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .card-body .card-content {
-  height: 60%;
+  height: 50%;
   padding: 20px;
 }
 
