@@ -7,7 +7,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-
+  searchGoal = "";
   goalTypes: any;
   constructor(private appService: AppService) { }
 

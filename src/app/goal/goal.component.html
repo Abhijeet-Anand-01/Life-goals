@@ -4,7 +4,7 @@
         <div class="search-goal">
             <h1>Select goal that you want to add</h1>
             <div class="search-bar">
-                <input type="text" class="search-input" placeholder="search goal..">
+                <input type="text" class="search-input" placeholder="search goal.." [(ngModel)]="searchGoal">
                 <img src="assets/svg-icons/search-icon.svg" class="search-icon">
             </div>
         </div>
@@ -13,24 +13,35 @@
         <div class="common-goals">
             <h2>Most common</h2>
             <div class="common-goal-container">
-                <div class="common-goal" *ngFor="let commonGoal of goalTypes.commonGoals">
-                    <img src="{{ commonGoal.image }}" alt="Image not loaded" [routerLink]="['/goal-details', commonGoal.id]">
-                    <p>{{ commonGoal.title }}</p>
-                </div>
+                <ng-container *ngFor="let commonGoal of goalTypes.commonGoals">
+                    <ng-container *ngIf="commonGoal.title.toLowerCase().trim().indexOf(searchGoal.toLowerCase().trim())>=0">
+                        <div class="common-goal">
+                            <img src="{{ commonGoal.image }}" alt="Image not loaded"
+                                [routerLink]="['/goal-details', commonGoal.id]">
+                            <p>{{ commonGoal.title }}</p>
+                        </div>
+                    </ng-container>
+                </ng-container>
             </div>
         </div>
         <div class="other-goals">
             <h2>Other goals</h2>
-            <div class="other-goal-container" *ngFor="let otherGoal of goalTypes.otherGoals">
-                <div class="other-goal">
-                    <img src="{{ otherGoal.image }}" alt="Image not loaded" [routerLink]="['/goal-details', otherGoal.id]">
-                    <div class="other-goal-details">
-                        <h3>{{ otherGoal.title }}</h3>
-                        <p>{{ otherGoal.goalTitle }}</p>
+            <ng-container *ngFor="let otherGoal of goalTypes.otherGoals">
+                <ng-container *ngIf="otherGoal.title.toLowerCase().trim().indexOf(searchGoal.toLowerCase().trim())>=0">
+                    <div class="other-goal-container">
+                        <div class="other-goal">
+                            <img src="{{ otherGoal.image }}" alt="Image not loaded"
+                                [routerLink]="['/goal-details', otherGoal.id]">
+                            <div class="other-goal-details">
+                                <h3>{{ otherGoal.title }}</h3>
+                                <p>{{ otherGoal.goalTitle }}</p>
+                            </div>
+                        </div>
+                        <hr>
                     </div>
-                </div>
-                <hr>
-            </div>
+                </ng-container>
+            </ng-container>
+
         </div>
     </div>
 </div>
