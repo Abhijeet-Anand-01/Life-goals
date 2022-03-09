@@ -34,13 +34,16 @@ export class GoalDetailsComponent implements OnInit {
     if (!this.currentGoal.id) {
       this.currentGoal.amountSaved = "0";
       this.currentGoal.goalTypeId = this.goalType.id;
+      this.appService.addGoal(this.currentGoal);
     }
-    this.appService.addGoal(this.currentGoal);
+    else this.appService.editGoal();
+    
     this.router.navigate(["/dashboard"]);
   }
 
   fetchAndPopulateData(id: string | number){
     this.currentGoal = this.appService.getAllGoals().filter(i => i.id == id)[0];
+
   }
 
 }

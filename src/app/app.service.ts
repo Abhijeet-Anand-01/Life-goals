@@ -36,9 +36,7 @@ export class AppService {
     this.allGoals.push(goal);
     this.saveInLocalStorage();
   }
-  editGoal(goal: Goal) {
-    // based on id update all goals
-    console.log(goal);
+  editGoal() {
     this.saveInLocalStorage();
   }
 
