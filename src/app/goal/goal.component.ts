@@ -9,6 +9,7 @@ export class GoalComponent implements OnInit {
 commonGoals = [
   { title: "Property", goalTitle: "New House", img: "./path" },
   { title: "Wedding", goalTitle: "Wedding Day", img: "./path" },
+  { title: "Wedding", goalTitle: "Wedding Day", img: "./path" },
 ];
 otherGoals = [
   { title: "Travel", goalTitle: "Hiking Trip", img: "./path" },

@@ -72,6 +72,7 @@
 
 .container .goals-container .common-goals .common-goal-container {
   display: flex;
+  overflow-x: auto;
 }
 
 .container .goals-container .common-goals .common-goal-container .common-goal {
@@ -89,7 +90,7 @@
   .common-goal
   img {
   height: 100%;
-  width: 100%;
+  width: inherit;
   object-fit: cover;
   border-radius: inherit;
 }
