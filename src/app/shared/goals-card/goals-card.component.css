@@ -1,9 +1,10 @@
 .card-body {
   background-color: #008393;
   color: #ffffff;
-  margin: 20px 0;
+  margin: 20px auto;
   border-radius: 20px;
   height: 250px;
+  width: 350px;
 }
 
 .card-body .card-img {
@@ -13,6 +14,7 @@
 }
 
 .card-body .card-img .edit-icon {
+  cursor: pointer;
   position: absolute;
   right: 5px;
   transition: all 1s;
@@ -72,4 +74,23 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+
+@media only screen and (min-width: 500px) {
+  .card-body {
+    height: 350px;
+    margin: 16px;
+  }
+
+  .card-body .card-img {
+    height: 55%;
+  }
+
+  .card-body .card-content {
+    height: 45%;
+  }
+
+  .card-body:hover .card-img .edit-icon {
+    top: 30%;
+  }
 }

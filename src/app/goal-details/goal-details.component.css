@@ -1,6 +1,5 @@
 .goal-details {
     background-color: #014343;
-    width: 100vw;
     height: 100vh;
     color: #ffffff;
     padding: 20px;
@@ -11,10 +10,10 @@
   margin-top: 30px;
 }
 .goal-details .card-body {
-    background-color: #008393;
-    color: #ffffff;
-    margin: 40px 0;
-    border-radius: 20px;
+  color: #ffffff;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 400px;
   }
   
   .goal-details .card-body .card-img {
@@ -88,4 +87,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: all 1s;
+  }
+
+  .goal-details .save-btn img:hover {
+    width: 50px;
   }

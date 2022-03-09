@@ -29,9 +29,8 @@
             <ng-container *ngFor="let otherGoal of goalTypes.otherGoals">
                 <ng-container *ngIf="otherGoal.title.toLowerCase().trim().indexOf(searchGoal.toLowerCase().trim())>=0">
                     <div class="other-goal-container">
-                        <div class="other-goal">
-                            <img src="{{ otherGoal.image }}" alt="Image not loaded"
-                                [routerLink]="['/goal-details', otherGoal.id]">
+                        <div class="other-goal" [routerLink]="['/goal-details', otherGoal.id]">
+                            <img src="{{ otherGoal.image }}" alt="Image not loaded">
                             <div class="other-goal-details">
                                 <h3>{{ otherGoal.title }}</h3>
                                 <p>{{ otherGoal.goalTitle }}</p>
