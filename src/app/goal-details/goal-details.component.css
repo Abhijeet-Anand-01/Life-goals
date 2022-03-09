@@ -5,6 +5,11 @@
     color: #ffffff;
     padding: 20px;
 }
+
+.goal-details h1 {
+  text-align: center;
+  margin-top: 30px;
+}
 .goal-details .card-body {
     background-color: #008393;
     color: #ffffff;

@@ -14,23 +14,16 @@
             <h2>Most common</h2>
             <div class="common-goal-container">
                 <div class="common-goal" *ngFor="let commonGoal of commonGoals">
-                    <img src="assets/svg-icons/house.svg" alt="">
+                    <img src="{{ commonGoal.image }}" alt="Image not loaded">
                     <p>{{ commonGoal.title }}</p>
                 </div>
-
-                <!-- duplicate -->
-                <!-- <div class="common-goal">
-                    <img src="assets/svg-icons/house.svg" alt="">
-                    <p>Property</p>
-                </div> -->
-                <!-- end -->
             </div>
         </div>
         <div class="other-goals">
             <h2>Other goals</h2>
             <div class="other-goal-container" *ngFor="let otherGoal of otherGoals">
                 <div class="other-goal">
-                    <img src="assets/svg-icons/house.svg" alt="">
+                    <img src="{{ otherGoal.image }}" alt="Image not loaded">
                     <div class="other-goal-details">
                         <h3>{{ otherGoal.title }}</h3>
                         <p>{{ otherGoal.goalTitle }}</p>

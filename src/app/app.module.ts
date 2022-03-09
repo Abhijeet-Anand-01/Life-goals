@@ -8,6 +8,7 @@ import { GoalsCardComponent } from './shared/goals-card/goals-card.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { GoalComponent } from './goal/goal.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

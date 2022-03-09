@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalComponent implements OnInit {
 commonGoals = [
-  { title: "Property", goalTitle: "New House", img: "./path" },
-  { title: "Wedding", goalTitle: "Wedding Day", img: "./path" },
-  { title: "Wedding", goalTitle: "Wedding Day", img: "./path" },
+  { title: "Property", goalTitle: "New House", image: "assets/svg-icons/property.jpg" },
+  { title: "Wedding", goalTitle: "Wedding Day", image: "assets/svg-icons/wedding.svg" },
+  { title: "Travel", goalTitle: "New Bike", image: "assets/svg-icons/bike.jpg" },
 ];
 otherGoals = [
-  { title: "Travel", goalTitle: "Hiking Trip", img: "./path" },
-  { title: "Transport", goalTitle: "New Car", img: "./path" },
+  { title: "Travel", goalTitle: "Hiking Trip", image: "assets/svg-icons/hiking.jpg" },
+  { title: "Transport", goalTitle: "New Car", image: "assets/svg-icons/car.svg" },
 ];
   constructor() { }
 
