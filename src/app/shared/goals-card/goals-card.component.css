@@ -7,17 +7,37 @@
 }
 
 .card-body .card-img {
+  position: relative;
   height: 40%;
   border-radius: inherit;
 }
 
-.card-body .card-img img {
+.card-body .card-img .edit-icon {
+  position: absolute;
+  right: 5px;
+  transition: all 1s;
+}
+
+.card-body:hover .card-img .edit-icon {
+  right: 50%;
+  /* top: 50%; */
+  width: 100px;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.card-body .card-img .card-thumbnail {
   height: 100%;
   width: 100%;
   object-fit: cover;
   /* object-position: top; */
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
+}
+
+.card-body:hover .card-img .card-thumbnail {
+  transition: all 0.5s;
+  filter: blur(3px);
 }
 
 .card-body .card-content {
@@ -36,13 +56,13 @@
 }
 
 .card-body .card-content .amount .amount-saved .amount-text {
-    font-size: 0.8em;
-    opacity: 0.8;
+  font-size: 0.8em;
+  opacity: 0.8;
 }
 
 .card-body .card-content .amount .amount-saved .amount-charge {
-    font-size: 1.2em;
-    font-weight: 700;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .card-body .card-content .amount .amount-loader {
