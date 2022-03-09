@@ -9,9 +9,16 @@ import { Goal } from '../shared/model/goal';
 })
 export class DashboardComponent implements OnInit {
   goals: Goal[] | undefined;
-  constructor(private appService: AppService) { }
+  goalTypes: any;
+  constructor(private appService: AppService) {
+    const goals = this.appService.getAllGoalTypes();
+    this.goalTypes = [...goals.commonGoals, ...goals.otherGoals];
+  }
 
   ngOnInit(): void {
     this.goals = this.appService.getAllGoals();
+  }
+  getGoalImg(goal: Goal) {
+    return this.goalTypes.filter((i: any) => i.id == goal.goalTypeId)[0].image;
   }
 }

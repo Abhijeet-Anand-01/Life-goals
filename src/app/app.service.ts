@@ -8,8 +8,9 @@ import { Goal } from './shared/model/goal';
 export class AppService {
 
   allGoals: Goal[] = [
-    { "id": 1, "title": "Travel", "goalTitle": "Mountain Trip", "totalAmount": "$10,000", "amountSaved": "$340", "image": "assets/svg-icons/mountain.svg" },
-    { "id": 2, "title": "Property", "goalTitle": "New House", "totalAmount": "$100,000", "amountSaved": "$56,550", "image": "assets/svg-icons/property.jpg" }];
+    { "id": 1, "goalTypeId": 4, "title": "Travel", "goalTitle": "Mountain Trip", "totalAmount": "10000", "amountSaved": "340" },
+    { "id": 2, "goalTypeId": 1, "title": "Property", "goalTitle": "New House", "totalAmount": "100000", "amountSaved": "56550" }
+  ];
   constructor(private http: HttpClient) {
   }
 
@@ -19,6 +20,7 @@ export class AppService {
       this.allGoals = storageGoals;
       return this.allGoals;
     }
+    this.saveInLocalStorage();
     return this.allGoals;
   }
   saveInLocalStorage() {
@@ -36,19 +38,21 @@ export class AppService {
   }
   editGoal(goal: Goal) {
     // based on id update all goals
+    console.log(goal);
     this.saveInLocalStorage();
   }
 
   getAllGoalTypes() {
     return {
       commonGoals: [
-        { title: "Property", goalTitle: "New House", image: "assets/svg-icons/property.jpg" },
-        { title: "Wedding", goalTitle: "Wedding Day", image: "assets/svg-icons/wedding.svg" },
-        { title: "Transport", goalTitle: "New Bike", image: "assets/svg-icons/bike.jpg" },
+        { id: "1", title: "Property", goalTitle: "New House", image: "assets/svg-icons/property.jpg" },
+        { id: "2", title: "Wedding", goalTitle: "Wedding Day", image: "assets/svg-icons/wedding.svg" },
+        { id: "3", title: "Transport", goalTitle: "New Bike", image: "assets/svg-icons/bike.jpg" },
+        { id: "4", title: "Travel", goalTitle: "Mountain Trip", image: "assets/svg-icons/mountain.svg" },
       ],
       otherGoals: [
-        { title: "Travel", goalTitle: "Hiking Trip", image: "assets/svg-icons/hiking.jpg" },
-        { title: "Transport", goalTitle: "New Car", image: "assets/svg-icons/car.svg" },
+        { id: "5", title: "Travel", goalTitle: "Hiking Trip", image: "assets/svg-icons/hiking.jpg" },
+        { id: "6", title: "Transport", goalTitle: "New Car", image: "assets/svg-icons/car.svg" },
       ]
     };
   }

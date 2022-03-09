@@ -10,6 +10,9 @@ export class GoalsCardComponent implements OnInit {
   @Input()
   goal!: Goal;
 
+  @Input()
+  img!: string;
+
   constructor() {
    }
 

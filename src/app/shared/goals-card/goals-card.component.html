@@ -1,6 +1,6 @@
 <div class="card-body">
     <div class="card-img">
-        <img src="{{ goal.image }}" alt="das">
+        <img src="{{ img }}" alt="das">
     </div>
     <div class="card-content">
         <h2 class="content-heading">{{ goal.goalTitle }}</h2>
@@ -8,9 +8,10 @@
         <div class="amount">
             <div class="amount-saved">
                 <p class="amount-text">Amount saved</p>
-                <p><span class="amount-charge">{{ goal.amountSaved }}</span> out of <b>{{ goal.totalAmount }}</b></p>
+                <p><span class="amount-charge">{{ goal.amountSaved | currency }}</span> out of <b>{{ goal.totalAmount |
+                        currency }}</b></p>
             </div>
-            <div class="amount-loader"></div>
+            <div class="amount-loader" [routerLink]="['/goal-details', goal.goalTypeId]" [queryParams]="{ id: goal.id}"></div>
         </div>
     </div>
 </div>

@@ -1,21 +1,21 @@
 <div class="goal-details">
-    <h1>Property (Goal type)</h1>
+    <h1>{{ goalType.title }}</h1>
 
     <div class="card-body">
         <div class="card-img">
-            <img src="assets/svg-icons/house.svg" alt="das">
+            <img [src]="goalType.image" alt="{{ goalType.goalTitle }}">
         </div>
         <div class="card-content">
             <h2 class="content-title">Goal title</h2>
-            <input type="text" class="title-desc" value="Mountain Trip" placeholder="Add your goal title..">
+            <input type="text" class="title-desc" [(ngModel)]="currentGoal.goalTitle" placeholder="Add your goal title..">
             <hr>
             <h2 class="content-title">Goal amount</h2>
-            <input type="text" class="amount" [ngModel]="num | currency" (change)="changeToDollar($event)" placeholder="Add your goal amount..">
+            <input type="text" class="amount" [ngModel]="currentGoal.totalAmount | currency" (change)="changeToDollar($event)" placeholder="Add your goal amount..">
             <hr>
             <p class="estimation">*Estimation is $5,000-$20,000.</p>
         </div>
     </div>
-    <div class="save-btn" routerLink="/dashboard">
+    <div class="save-btn" (click)="saveGoal()">
         <img src="assets/svg-icons/correct-icon.svg" alt="Save">
     </div>
 </div>
