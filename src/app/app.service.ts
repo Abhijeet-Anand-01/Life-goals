@@ -40,6 +40,6 @@ export class AppService {
   }
 
   getAllGoalTypes() {
-    return [{ title: "Property", img: "./path" }];
+    return [{ title: "Property", goalTitle: "", img: "./path" }];
   }
 }

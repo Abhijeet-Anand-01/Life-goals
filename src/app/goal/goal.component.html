@@ -3,47 +3,40 @@
         <img src="assets/svg-icons/back-icon.svg" class="back-arrow" routerLink="/dashboard">
         <div class="search-goal">
             <h1>Select goal that you want to add</h1>
-            <input type="text" class="search-input" placeholder="search goal..">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="search goal..">
+                <img src="assets/svg-icons/search-icon.svg" class="search-icon">
+            </div>
         </div>
     </div>
     <div class="goals-container">
         <div class="common-goals">
             <h2>Most common</h2>
             <div class="common-goal-container">
-                <div class="common-goal">
+                <div class="common-goal" *ngFor="let commonGoal of commonGoals">
                     <img src="assets/svg-icons/house.svg" alt="">
-                    <p>Property</p>
+                    <p>{{ commonGoal.title }}</p>
                 </div>
 
                 <!-- duplicate -->
-                <div class="common-goal">
+                <!-- <div class="common-goal">
                     <img src="assets/svg-icons/house.svg" alt="">
                     <p>Property</p>
-                </div>
+                </div> -->
                 <!-- end -->
             </div>
         </div>
         <div class="other-goals">
             <h2>Other goals</h2>
-            <div class="other-goal-container">
+            <div class="other-goal-container" *ngFor="let otherGoal of otherGoals">
                 <div class="other-goal">
                     <img src="assets/svg-icons/house.svg" alt="">
                     <div class="other-goal-details">
-                        <h3>Travel</h3>
-                        <p>Hiking trip</p>
+                        <h3>{{ otherGoal.title }}</h3>
+                        <p>{{ otherGoal.goalTitle }}</p>
                     </div>
                 </div>
                 <hr>
-                <!-- duplicate -->
-                <div class="other-goal">
-                    <img src="assets/svg-icons/house.svg" alt="">
-                    <div class="other-goal-details">
-                        <h3>Travel</h3>
-                        <p>Hiking trip</p>
-                    </div>
-                </div>
-                <hr>
-                <!-- end -->
             </div>
         </div>
     </div>
