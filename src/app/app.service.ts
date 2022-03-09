@@ -40,6 +40,16 @@ export class AppService {
   }
 
   getAllGoalTypes() {
-    return [{ title: "Property", goalTitle: "", image: "./path" }];
+    return {
+      commonGoals: [
+        { title: "Property", goalTitle: "New House", image: "assets/svg-icons/property.jpg" },
+        { title: "Wedding", goalTitle: "Wedding Day", image: "assets/svg-icons/wedding.svg" },
+        { title: "Transport", goalTitle: "New Bike", image: "assets/svg-icons/bike.jpg" },
+      ],
+      otherGoals: [
+        { title: "Travel", goalTitle: "Hiking Trip", image: "assets/svg-icons/hiking.jpg" },
+        { title: "Transport", goalTitle: "New Car", image: "assets/svg-icons/car.svg" },
+      ]
+    };
   }
 }

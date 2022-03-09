@@ -13,15 +13,15 @@
         <div class="common-goals">
             <h2>Most common</h2>
             <div class="common-goal-container">
-                <div class="common-goal" *ngFor="let commonGoal of commonGoals">
-                    <img src="{{ commonGoal.image }}" alt="Image not loaded">
+                <div class="common-goal" *ngFor="let commonGoal of goalTypes.commonGoals">
+                    <img src="{{ commonGoal.image }}" alt="Image not loaded" [routerLink]="['/goal-details', commonGoal.goalTitle]">
                     <p>{{ commonGoal.title }}</p>
                 </div>
             </div>
         </div>
         <div class="other-goals">
             <h2>Other goals</h2>
-            <div class="other-goal-container" *ngFor="let otherGoal of otherGoals">
+            <div class="other-goal-container" *ngFor="let otherGoal of goalTypes.otherGoals">
                 <div class="other-goal">
                     <img src="{{ otherGoal.image }}" alt="Image not loaded">
                     <div class="other-goal-details">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-goal',
@@ -6,18 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-commonGoals = [
-  { title: "Property", goalTitle: "New House", image: "assets/svg-icons/property.jpg" },
-  { title: "Wedding", goalTitle: "Wedding Day", image: "assets/svg-icons/wedding.svg" },
-  { title: "Travel", goalTitle: "New Bike", image: "assets/svg-icons/bike.jpg" },
-];
-otherGoals = [
-  { title: "Travel", goalTitle: "Hiking Trip", image: "assets/svg-icons/hiking.jpg" },
-  { title: "Transport", goalTitle: "New Car", image: "assets/svg-icons/car.svg" },
-];
-  constructor() { }
+
+  goalTypes: any;
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.goalTypes = this.appService.getAllGoalTypes();
   }
 
 }
