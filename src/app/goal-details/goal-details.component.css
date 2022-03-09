@@ -5,19 +5,19 @@
     color: #ffffff;
     padding: 20px;
 }
-.card-body {
+.goal-details .card-body {
     background-color: #008393;
     color: #ffffff;
     margin: 40px 0;
     border-radius: 20px;
   }
   
-  .card-body .card-img {
+  .goal-details .card-body .card-img {
     border-radius: inherit;
     height: 200px;
   }
   
-  .card-body .card-img img {
+  .goal-details .card-body .card-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -26,31 +26,42 @@
     border-top-right-radius: inherit;
   }
   
-  .card-body .card-content {
+  .goal-details .card-body .card-content {
     text-align: center;
     padding: 0px 30px 50px;
   }
   
-  .card-body .card-content hr {
+  .goal-details .card-body .card-content hr {
     margin: 10px 0 15px 0;
     opacity: 0.2;
   }
   
-  .card-body .card-content .content-title {
+  .goal-details .card-body .card-content .content-title {
       font-size: 1em;
       font-weight: 400;
       margin: 30px 0 5px 0;
   }
   
-  .title-desc {
+  .goal-details .card-body .card-content .title-desc, .goal-details .card-body .card-content .amount {
     font-size: 1.1em;
     font-weight: 600;
+    outline: none;
+    border: none;
+    background: none;
+    color: #ffffff;
+    text-align: center;
   }
 
-  .amount {
-      font-size: 1.5em;
-      font-weight: 600;
+  .goal-details .card-body .card-content .title-desc::-webkit-input-placeholder, .goal-details .card-body .card-content .amount::-webkit-input-placeholder {
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 1rem;
   }
+
+  .goal-details .card-body .card-content .amount {
+      font-size: 1.5em;
+  }
+
 
   .estimation {
     font-size: 0.9em;
