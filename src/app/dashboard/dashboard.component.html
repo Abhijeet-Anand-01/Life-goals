@@ -3,6 +3,6 @@
     <h1 class="goals-heading">Life goals</h1>
     <p class="goal-title">Take control of your saving goals</p>
     <ng-container *ngFor="let goal of goals;">
-        <app-goals-card [goal]="goal" [img]="getGoalImg(goal)"></app-goals-card>
+        <app-goals-card [goal]="goal" [img]="getGoalImg(goal)" [bgColor]="getGoalBgColor(goal)"></app-goals-card>
     </ng-container>
 </div>

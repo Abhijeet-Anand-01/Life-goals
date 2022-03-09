@@ -21,4 +21,7 @@ export class DashboardComponent implements OnInit {
   getGoalImg(goal: Goal) {
     return this.goalTypes.filter((i: any) => i.id == goal.goalTypeId)[0].image;
   }
+  getGoalBgColor(goal: Goal) {
+    return this.goalTypes.filter((i: any) => i.id == goal.goalTypeId)[0].color;
+  }
 }

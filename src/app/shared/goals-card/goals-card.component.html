@@ -1,4 +1,4 @@
-<div class="card-body">
+<div class="card-body" [ngStyle]="{'background-color': bgColor}">
     <div class="card-img">
         <img src="assets/svg-icons/edit-icon.svg" alt="Edit" class="edit-icon" [routerLink]="['/goal-details', goal.goalTypeId]" [queryParams]="{ id: goal.id}">
         <img src="{{ img }}" alt="{{ goal.goalTitle }}" class="card-thumbnail">

@@ -20,8 +20,8 @@
 
 .card-body:hover .card-img .edit-icon {
   right: 50%;
-  /* top: 50%; */
-  width: 100px;
+  top: 15%;
+  width: 70px;
   transform: translateX(50%);
   z-index: 1;
 }

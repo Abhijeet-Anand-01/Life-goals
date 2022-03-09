@@ -1,7 +1,7 @@
 <div class="goal-details">
     <h1>{{ goalType.title }}</h1>
 
-    <div class="card-body">
+    <div class="card-body" [ngStyle]="{'background-color': goalType.color }">
         <div class="card-img">
             <img [src]="goalType.image" alt="{{ goalType.goalTitle }}">
         </div>

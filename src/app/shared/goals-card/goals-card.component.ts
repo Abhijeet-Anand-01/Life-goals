@@ -13,8 +13,11 @@ export class GoalsCardComponent implements OnInit {
   @Input()
   img!: string;
 
+  @Input()
+  bgColor!: string;
+
   constructor() {
-   }
+  }
 
   ngOnInit(): void {
   }
