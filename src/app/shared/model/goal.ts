@@ -2,7 +2,7 @@ export interface Goal {
     id: number;
     title: string;
     goalTitle: string;
-    totalAmount: number;
-    amountSaved: number;
+    totalAmount: string;
+    amountSaved: string;
     image: string;
 }

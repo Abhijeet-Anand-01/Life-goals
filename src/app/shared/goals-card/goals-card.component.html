@@ -3,12 +3,12 @@
         <img src="assets/svg-icons/house.svg" alt="das">
     </div>
     <div class="card-content">
-        <h2 class="content-heading">{{ goal.id }}</h2>
+        <h2 class="content-heading">{{ goal.goalTitle }}</h2>
         <hr>
         <div class="amount">
             <div class="amount-saved">
                 <p class="amount-text">Amount saved</p>
-                <p><span class="amount-charge">$340</span> out of <b>$10,000</b></p>
+                <p><span class="amount-charge">{{ goal.amountSaved }}</span> out of <b>{{ goal.totalAmount }}</b></p>
             </div>
             <div class="amount-loader"></div>
         </div>

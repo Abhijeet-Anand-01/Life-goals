@@ -8,8 +8,8 @@ import { Goal } from './shared/model/goal';
 export class AppService {
 
   allGoals: Goal[] = [
-    { "id": 1, "title": "Travel", "goalTitle": "Mountain Trip", "totalAmount": 10000, "amountSaved": 340, "image": "assets/svg-icons/house.svg" },
-    { "id": 2, "title": "property", "goalTitle": "New House", "totalAmount": 100000, "amountSaved": 56550, "image": "assets/svg-icons/house.svg" }];
+    { "id": 1, "title": "Travel", "goalTitle": "Mountain Trip", "totalAmount": "$10,000", "amountSaved": "$340", "image": "assets/svg-icons/house.svg" },
+    { "id": 2, "title": "property", "goalTitle": "New House", "totalAmount": "$100,000", "amountSaved": "$56,550", "image": "assets/svg-icons/house.svg" }];
   constructor(private http: HttpClient) {
   }
 
